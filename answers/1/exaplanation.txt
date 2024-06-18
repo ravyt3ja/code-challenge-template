@@ -1,0 +1,20 @@
+
+
+station_id: This column will store the ID of the weather station. It is defined as a VARCHAR(50) to allow flexibility in station ID formats.
+
+date: This column will store the date of the record in the DATE format.
+max_temperature: This column will store the maximum temperature for that day, in tenths of a degree Celsius, as an INT.
+
+min_temperature: This column will store the minimum temperature for that day, in tenths of a degree Celsius, as an INT.
+
+precipitation: This column will store the amount of precipitation for that day, in tenths of a millimeter, as an INT.
+
+PRIMARY KEY (station_id, date): This combination ensures that each record is unique based on the weather station and the date.
+
+
+Explanation of Data Ingestion:
+- Load the data from a file into a DataFrame.
+- Handle missing values by converting -9999 to None.
+- Insert the cleaned data into the PostgreSQL database.
+
+This approach ensures the data is correctly structured and missing values are appropriately handled before being stored in the database.
