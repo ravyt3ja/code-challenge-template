@@ -1,0 +1,10 @@
+#CreateWeatherDataTable
+
+CREATE TABLE WeatherData (
+    station_id VARCHAR(50) NOT NULL,
+    date DATE NOT NULL,
+    max_temperature INT,
+    min_temperature INT,
+    precipitation INT,
+    PRIMARY KEY (station_id, date)
+);
