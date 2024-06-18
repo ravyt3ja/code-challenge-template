@@ -1,0 +1,8 @@
+CREATE TABLE WeatherStats (
+    station_id VARCHAR(50) NOT NULL,
+    year INT NOT NULL,
+    avg_max_temp REAL,
+    avg_min_temp REAL,
+    total_precipitation REAL,
+    PRIMARY KEY (station_id, year)
+);
