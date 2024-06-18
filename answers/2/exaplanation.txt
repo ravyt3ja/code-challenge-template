@@ -1,0 +1,16 @@
+Explanation:
+Logging Setup:
+
+Configures logging to record the ingestion process start and end times, and the number of records ingested.
+Database Connection:
+
+The get_db_connection function establishes a connection to the PostgreSQL database.
+Data Handling:
+
+The handle_missing_values function converts missing values (-9999) to None.
+The ingest_data function reads the data file into a DataFrame, processes it, and inserts it into the database. It uses the ON CONFLICT clause to avoid inserting duplicate records.
+Ingestion Process:
+
+The main function iterates over all text files in the wx_data directory, calling the ingest_data function for each file.
+Logs the total number of records ingested and the duration of the process.
+By running this script, you will ingest the weather data into your PostgreSQL database, handle duplicates, and produce log output indicating the process details.
